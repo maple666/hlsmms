@@ -1,0 +1,121 @@
+/* 公共样式 */
+body{
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+/* -------------------左侧样式--------------------- */
+.el-aside {
+    /* height: 100%; */
+    background-image: url(../images/3.jpg); background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+}
+.el-menu {
+    background: none;
+    width: 206px;
+    margin-left: 24px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+.el-submenu__title {
+    line-height: 33px;
+    height: 33px;
+    color: aliceblue;
+    background: url(../images/menuBG.png) repeat-x;
+    border-radius: 5px 0px 0px 5px;
+}
+.el-submenu {
+    margin-bottom: 10px;
+    text-align: right;
+}
+.el-submenu__title:hover {
+    background: rgb(45, 19, 194);
+    border-radius: 5px 0px 0px 5px;
+}
+.el-icon-arrow-down{
+    display: none;
+}
+/* 子菜单样式 */
+.el-menu--inline {
+    margin-left: 0px;
+    
+}
+.el-submenu .el-menu-item {
+    padding: 0px 20px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    color: aliceblue;
+    border-radius: 5px 0px 0px 5px;
+}
+/* 子菜单激活样式 */
+.el-menu-item.is-active{
+    background: rgba(255,255, 255, 0.3)
+}
+.el-menu-item:hover, .el-menu-item:focus{
+    background: rgba(180, 159, 159, 0.76)
+}
+/* 自定义的顶部样式 */
+#leftTitle {
+    color: aliceblue;
+    text-align: right;
+    padding: 0 20px;
+}
+#leftTitle h1 {
+    font-size: 22px;
+    font-family: "黑体"
+}
+
+
+/* -------------------------------------- */
+.el-header,
+.el-footer {
+    background-color: #f2f2f2;
+    color: #333;
+
+}
+.el-header {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.el-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+.el-footer p {
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+    border-top: 1px solid #ccc;
+}
+
+  
+
+.el-main {
+    color: #333;
+    padding: 0;
+}
+.el-main .el-card__header {
+    padding: 0px 20px;
+    height: 44px;
+    background:linear-gradient(#fff,#ccc)
+}
+.el-main h3 {
+    margin: 0;
+    line-height: 44px;
+}
+.el-main .el-alert{
+    margin-bottom: 10px;
+}
+.el-table .warning-row {
+    background: oldlace;
+  }
+
+  .el-table .success-row {
+    background: #f0f9eb;
+  }
