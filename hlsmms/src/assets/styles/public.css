@@ -99,6 +99,10 @@ a {
 .el-main {
     color: #333;
     padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    max-height: 420px;
+
 }
 .el-main .el-card__header {
     padding: 0px 20px;
@@ -119,3 +123,92 @@ a {
   .el-table .success-row {
     background: #f0f9eb;
   }
+
+/* 主题伸缩排版 */
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+#mainContent>* {
+    width: 100%;
+}
+
+
+/* 添加管理员 表单样式 */
+.el-input {
+    width: 30%;
+}
+.el-input--suffix {
+    width: 100%;
+}
+
+
+/* 分类管理样式 */
+.sortmanatitle {
+    height: 44px;
+    line-height: 44px;
+}
+.sortmanatitle .type {
+    font-size: 16px;
+    
+}
+
+.catebtn {
+    margin-top: 20px;
+}
+
+
+/* 添加商品样式 */
+.goodsstyle {
+    width: 60%;
+}
+
+.goodsmenu {
+    font-size: 12px;
+    color: #ccc;
+}
+#addgoods p {
+    font-weight: bold;
+}
+.goodstitle {
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+    font-weight: normal !important;
+}
+/* 商品管理 */
+#goodmana .el-form-item--feedback {
+    float: left;
+}
+#goodmana .el-form-item__content {
+    margin-left: 0px !important;
+    width: 200%;
+}
+#goodmana .el-form-item__label {
+    width: 70px !important;
+    text-align: right !important;
+    padding: 0;
+}
+
+
+/* 商品入库样式 */
+#stock p {
+    line-height: 20px;
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* 库存列表样式 */
+#stocklist .el-form-item--feedback {
+    float: left;
+}
+#stocklist .el-form-item__content {
+    margin-left: 0px !important;
+    width: 200%;
+}
+#stocklist .el-form-item__label {
+    width: 70px !important;
+    text-align: right !important;
+    padding: 0;
+}

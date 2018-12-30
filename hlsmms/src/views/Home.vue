@@ -1,114 +1,10 @@
 <template>
   <el-container id="home">
     <!-- 左侧导航 -->
-    <el-aside width="230px">
-      <div id="leftTitle">
-        <h1>华联超市管理系统</h1>
-        <p>你好！ Admin</p>
-        <p>
-          <a href="#">管理首页</a> | 退出系统
-        </p>
-      </div>
-
-      <el-menu
-        default-active="2"
-        class="el-menu-vertical-demo"
-        @open="handleOpen"
-        @close="handleClose"
-        :unique-opened="true"
-      >
-        <el-submenu index="1">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>分类管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">分类管理</el-menu-item>
-            <el-menu-item index="1-2">添加分类</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="2">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>商品管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">商品管理</el-menu-item>
-            <el-menu-item index="1-2">添加商品</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="3">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>进货管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">库存管理</el-menu-item>
-            <el-menu-item index="1-2">添加库存</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="4">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>出货管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">销售列表</el-menu-item>
-            <el-menu-item index="1-2">商品出库</el-menu-item>
-            <el-menu-item index="1-3">商品退货</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="5">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>统计管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">销售统计</el-menu-item>
-            <el-menu-item index="1-2">进货统计</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="6">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>账号管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">账号管理</el-menu-item>
-            <el-menu-item index="1-2">添加账号</el-menu-item>
-            <el-menu-item index="1-3">密码修改</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="7">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>会员管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">账号管理</el-menu-item>
-            <el-menu-item index="1-2">添加账号</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="8">
-          <template slot="title">
-            <!-- <i class="el-icon-location"></i> -->
-            <span>系统管理</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">系统信息</el-menu-item>
-            <el-menu-item index="1-2">系统配置</el-menu-item>
-            <el-menu-item index="1-3">权限管理</el-menu-item>
-            <el-menu-item index="1-4">添加管理组</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-      </el-menu>
-    </el-aside>
-    <el-container>
+      <leftMenu></leftMenu>
+    <el-container id="mainContent">
       <!-- 右侧头部 -->
-      <el-header height="auto">
-        <h1>欢迎您 admin</h1>
-        <p>查看详细的系统信息</p>
-      </el-header>
+      <RightTop></RightTop>
       <!-- 右侧内容 -->
       <el-main>
         <!-- main  -->
@@ -162,16 +58,15 @@
         </el-card>
       </el-main>
       <!-- 右侧页脚 -->
-      <el-footer height="50px">
-        <p>&copy;Copyright 2018 华联超市管理系统</p>
-      </el-footer>
+      <RightBottom></RightBottom>
     </el-container>
   </el-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import LeftMenu from '../components/leftMenu';
+import RightTop from '../components/rightTop';
+import RightBottom from '../components/rightBottom'
 
 export default {
   data() {
@@ -187,14 +82,12 @@ export default {
       ]
     };
   },
-  components: {},
+  components: {
+    LeftMenu,
+    RightTop,
+    RightBottom
+  },
   methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
-    },
     handleClick(row) {
       console.log(row);
     },
@@ -211,5 +104,6 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
 

@@ -19,12 +19,49 @@ export default new Router({
       component: Login
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/useradd',
+      name: 'useradd',
+      component: () => import(/* webpackChunkName: "about" */ './views/UserAdd.vue')
+    },
+    {
+      path: '/userlist',
+      name: 'userlist',
+      component: () => import(/* webpackChunkName: "about" */ './views/UserList.vue')
+    },
+    {
+      path: '/pwdedit',
+      name: 'pwdedit',
+      component: () => import(/* webpackChunkName: "about" */ './views/UserPwdEdit.vue')
+    },
+    {
+      path: '/sortmanagement',
+      name: 'sortmanagement',
+      component: () => import(/* webpackChunkName: "about" */ './views/SortManagement.vue')
+    },
+    {//添加分类
+      path: '/addcategory',
+      name: 'addcategory',
+      component: () => import(/* webpackChunkName: "about" */ './views/AddCategory.vue')
+    },
+    {//添加商品
+      path: '/addproduct',
+      name: 'addproduct',
+      component: () => import(/* webpackChunkName: "about" */ './views/AddProduct.vue')
+    },
+    {//商品管理
+      path: '/goodsmanagement',
+      name: 'goodsmanagement',
+      component: () => import(/* webpackChunkName: "about" */ './views/GoodsManagement.vue')
+    },
+    {//添加库存
+      path: '/addstock',
+      name: 'addstock',
+      component: () => import(/* webpackChunkName: "about" */ './views/AddStock.vue')
+    },
+    {//库存管理
+      path: '/stocklist',
+      name: 'stocklist',
+      component: () => import(/* webpackChunkName: "about" */ './views/StockList.vue')
     }
   ]
 })
